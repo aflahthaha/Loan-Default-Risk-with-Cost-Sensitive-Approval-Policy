@@ -97,7 +97,9 @@ Top XGBoost feature importances (one-hot columns grouped back to the original fe
 | `disbursed_amount` | 0.056 |
 | `ltv` (loan-to-value) | 0.052 |
 
-SHAP summary plots (with a check that the SHAP values add up to the model output) are in the notebook.
+## SHAP analysis
+
+SHAP analysis (2,000 test loans) ranks loan-to-value, State, and the bureau score category as the most influential features. A high LTV, overdue accounts, delinquent accounts, credit inquiries, a younger age and self-employment push the predicted risk up, while a longer credit history and “very low risk” bureau categories push it down. The strong effect of State_ID should be checked for fairness before real use.
 
 ## Streamlit app
 
